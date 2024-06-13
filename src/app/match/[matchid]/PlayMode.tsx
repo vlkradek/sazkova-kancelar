@@ -144,7 +144,7 @@ const PlayMode = ({
         <>
             <div className="rounded-xl bg-indigo-700 p-10">
                 <div className="font-semibold text-2xl text-white text-center">
-                    {time}'
+                    {time}&apos;
                 </div>
                 <div className="flex w-full text-white font-bold text-2xl mt-6">
                     <div className="flex-1">{match.home}</div>
