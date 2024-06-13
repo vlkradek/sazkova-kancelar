@@ -31,7 +31,7 @@ const Nav = () => {
                 <Link href={`/`}>BetMaster</Link>
                 <ul>
                     <li>
-                        Zůstatek: <b>{formatNumber(money)}Kč</b>
+                        Zůstatek: <b>{formatNumber(Math.floor(money))}Kč</b>
                     </li>
                 </ul>
             </div>
