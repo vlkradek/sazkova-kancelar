@@ -4,6 +4,15 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useWallet } from "./WalletContext";
 
+export function formatNumber(num: number) {
+    const numString = num.toString();
+    const parts = [];
+    for (let i = numString.length - 1; i >= 0; i -= 3) {
+        parts.unshift(numString.slice(Math.max(0, i - 2), i + 1));
+    }
+    return parts.join(" ");
+}
+
 const Nav = () => {
     // const [money, setMoney] = useState<number>()
     // let localstorage = localStorage.getItem("money")
@@ -15,14 +24,6 @@ const Nav = () => {
     //     setMoney(moneyStored)
     // },[])
     const { money } = useWallet();
-    function formatNumber(num: number) {
-        const numString = num.toString();
-        const parts = [];
-        for (let i = numString.length - 1; i >= 0; i -= 3) {
-            parts.unshift(numString.slice(Math.max(0, i - 2), i + 1));
-        }
-        return parts.join(" ");
-    }
 
     return (
         <nav className="text-white bg-indigo-700 py-4">
