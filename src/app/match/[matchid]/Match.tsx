@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-const Match = ({match}:{match:any}) => {
-    return(
+const Match = ({ match }: { match: any }) => {
+    return (
         <div className="flex justify-center gap-10 my-10">
             <div className="flex flex-col items-center">
                 <h3>{match.home}</h3>
@@ -11,7 +11,7 @@ const Match = ({match}:{match:any}) => {
                 </div>
             </div>
             <div>:</div>
-            
+
             <div className="flex flex-col items-center">
                 <h3>{match.away}</h3>
                 <div>
@@ -19,7 +19,14 @@ const Match = ({match}:{match:any}) => {
                     <span className="rounded py-2 px-4 ">{match.odd.away}</span>
                 </div>
             </div>
+            <div className="flex flex-col items-center">
+                <h3>Remíza</h3>
+                <div>
+                    Kurz
+                    <span className="rounded py-2 px-4 ">{match.odd.draw}</span>
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};
 export default Match;
